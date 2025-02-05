@@ -1,9 +1,11 @@
-"use client"
-
-import { RootState } from "@/redux/store";
-import { useSelector } from "react-redux";
+'use client'
 
 export default function Home() {
-  const count = useSelector((state: RootState) => state.accounting.value);
-  return <>{count}</>;
+  return (
+    <>
+      <h1>
+        Welcome to <a href="https://nextjs.org">Next.js!</a>
+      </h1>
+    </>
+  )
 }
