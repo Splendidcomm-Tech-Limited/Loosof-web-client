@@ -5,7 +5,6 @@ import * as React from 'react'
 import { NavMain } from '@/components/nav-main'
 // import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from '@/components/nav-user'
-import { TeamSwitcher } from '@/components/team-switcher'
 import {
   Sidebar,
   SidebarContent,
@@ -17,15 +16,8 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar'
 import { sidebarData } from '@/data/sidebar'
-import { Separator } from '@radix-ui/react-separator'
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage,
-} from './ui/breadcrumb'
+
+
 import { GalleryVerticalEnd } from 'lucide-react'
 
 // This is sample data.
@@ -46,7 +38,7 @@ export function AppSidebar({ children, ...props }: React.ComponentProps<typeof S
           </div>
         </SidebarHeader>
 
-        <SidebarContent className=''>
+        <SidebarContent className="">
           <NavMain items={data.navMain} />
         </SidebarContent>
         <SidebarFooter>
@@ -54,7 +46,7 @@ export function AppSidebar({ children, ...props }: React.ComponentProps<typeof S
         </SidebarFooter>
         <SidebarRail />
       </Sidebar>
-      <SidebarInset className="flex flex-col h-screen">
+      <SidebarInset className="flex flex-col h-screen space-x-6 ">
         <div className="">
           <SidebarTrigger />
         </div>
