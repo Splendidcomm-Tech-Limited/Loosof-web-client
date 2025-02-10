@@ -17,8 +17,8 @@ import {
 } from '@/components/ui/sidebar'
 import { sidebarData } from '@/data/sidebar'
 
-
 import { GalleryVerticalEnd } from 'lucide-react'
+import { ScrollArea } from './ui/scroll-area'
 
 // This is sample data.
 
@@ -39,15 +39,17 @@ export function AppSidebar({ children, ...props }: React.ComponentProps<typeof S
         </SidebarHeader>
 
         <SidebarContent className="">
-          <NavMain items={data.navMain} />
+          <ScrollArea>
+            <NavMain items={data.navMain} />
+          </ScrollArea>
         </SidebarContent>
         <SidebarFooter>
           <NavUser user={data.user} />
         </SidebarFooter>
         <SidebarRail />
       </Sidebar>
-      <SidebarInset className="flex flex-col h-screen space-x-6 ">
-        <div className="">
+      <SidebarInset className="flex flex-col h-screen  items">
+        <div className="absolute">
           <SidebarTrigger />
         </div>
         <div className="">{children}</div>

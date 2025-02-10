@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { VariantProps, cva } from 'class-variance-authority'
-import { ChevronLeftCircleIcon} from 'lucide-react'
+import { ChevronLeft } from 'lucide-react'
 
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/utils'
@@ -13,7 +13,6 @@ import { Separator } from '@/components/ui/separator'
 import { Sheet, SheetContent } from '@/components/ui/sheet'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-
 
 const SIDEBAR_COOKIE_NAME = 'sidebar:state'
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -250,30 +249,27 @@ const Sidebar = React.forwardRef<
 )
 Sidebar.displayName = 'Sidebar'
 
-const SidebarTrigger = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, onClick, ...props }, ref) => {
-  const { toggleSidebar } = useSidebar()
+const SidebarTrigger = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, onClick, ...props }, ref) => {
+    const { toggleSidebar } = useSidebar()
 
-  return (
-    <div
-      ref={ref}
-      data-sidebar="trigger"
- 
-
-      className={cn('h-10 w-10 absolute -left-[5px] z-50', className)}
-      onClick={(event) => {
-        onClick?.(event)
-        toggleSidebar()
-      }}
-      {...props}
-    >
-      <ChevronLeftCircleIcon size={20} />
-      <span className="sr-only">Toggle Sidebar</span>
-    </div>
-  )
-})
+    return (
+      <div
+        ref={ref}
+        data-sidebar="trigger"
+        className={cn('h-10 w-10  cursor-pointer top-4  absolute -left-[5px] z-[9999]', className)}
+        onClick={(event) => {
+          onClick?.(event)
+          toggleSidebar()
+        }}
+        {...props}
+      >
+        <ChevronLeft size={20} className="text-white rounded-full bg-primary" />
+        <span className="sr-only">Toggle Sidebar</span>
+      </div>
+    )
+  }
+)
 SidebarTrigger.displayName = 'SidebarTrigger'
 
 const SidebarRail = React.forwardRef<HTMLButtonElement, React.ComponentProps<'button'>>(

@@ -42,6 +42,8 @@ body {
     --sidebar-accent-foreground: 222, 47%, 11%, 1;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --top-nav-bg : 210, 40%, 96%, 1;
+    --top-nav-border : 0, 0%, 84%, 1
   }
 
   .dark {
