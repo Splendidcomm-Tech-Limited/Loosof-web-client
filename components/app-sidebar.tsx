@@ -24,6 +24,7 @@ import { ScrollArea } from './ui/scroll-area'
 
 export function AppSidebar({ children, ...props }: React.ComponentProps<typeof Sidebar>) {
   const data = sidebarData
+
   return (
     <SidebarProvider>
       <Sidebar collapsible="icon" {...props}>

@@ -28,7 +28,9 @@ export function AccountingNavBar() {
               {section.items && section.items.length > 0 && (
                 <>
                   <NavigationMenuContent className="py-4">
-                    <h4 className=" text-sm font-semibold leading-none px-2 pb-2">{section.title}</h4>
+                    <h4 className=" text-sm font-semibold leading-none px-2 pb-2">
+                      {section.title}
+                    </h4>
 
                     <ScrollArea>
                       <ul className="grid w-[230px] max-h-[400px]  gap-1 py-1 px-5">
@@ -44,7 +46,7 @@ export function AccountingNavBar() {
                                     <li key={subItem.title}>
                                       <NavigationMenuLink asChild>
                                         <Link
-                                          href={subItem.href || '#'}
+                                          href={`/dashboard/accounting${subItem.href}` || '#'}
                                           className="block select-none space-y-1 rounded-md  leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-white focus:bg-accent focus:text-accent-foreground"
                                         >
                                           <div className="text-sm font-normal leading-none p-2">
@@ -59,7 +61,7 @@ export function AccountingNavBar() {
                             ) : (
                               <NavigationMenuLink asChild>
                                 <Link
-                                  href={item.href || '#'}
+                                  href={`/dashboard/accounting${item.href}` || '#'}
                                   className="block select-none space-y-1  rounded-md leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-white focus:bg-accent focus:text-accent-foreground"
                                 >
                                   <div className="text-sm font-medium leading-none p-2">
@@ -80,7 +82,7 @@ export function AccountingNavBar() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="ml-auto flex items-center gap-4">
+      {/* <div className="ml-auto flex items-center gap-4">
         <Button variant="ghost" size="icon">
           <Bell className="h-5 w-5" />
         </Button>
@@ -91,7 +93,7 @@ export function AccountingNavBar() {
             <AvatarFallback>OW</AvatarFallback>
           </Avatar>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

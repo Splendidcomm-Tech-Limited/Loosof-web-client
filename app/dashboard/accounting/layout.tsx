@@ -15,7 +15,8 @@ export default function DashboardLayout({
   return (
     <>
       <AccountingNavBar />
-      {children}
+
+      <div className="p-3">{children}</div>
     </>
   )
 }
