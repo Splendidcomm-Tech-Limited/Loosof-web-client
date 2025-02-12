@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { VariantProps, cva } from 'class-variance-authority'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/utils'
@@ -251,20 +251,24 @@ Sidebar.displayName = 'Sidebar'
 
 const SidebarTrigger = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, onClick, ...props }, ref) => {
-    const { toggleSidebar } = useSidebar()
+    const { toggleSidebar, open } = useSidebar()
 
     return (
       <div
         ref={ref}
         data-sidebar="trigger"
-        className={cn('h-10 w-10  cursor-pointer top-4  absolute -left-[5px] z-[9999]', className)}
+        className={cn('h-10 w-10  cursor-pointer top-4  fixed z-[9999]', className)}
         onClick={(event) => {
           onClick?.(event)
           toggleSidebar()
         }}
         {...props}
       >
-        <ChevronLeft size={20} className="text-white rounded-full bg-primary" />
+        {open ? (
+          <ChevronLeft size={20} className="text-white rounded-full bg-primary" />
+        ) : (
+          <ChevronRight size={20} className="text-white rounded-full bg-primary" />
+        )}
         <span className="sr-only">Toggle Sidebar</span>
       </div>
     )

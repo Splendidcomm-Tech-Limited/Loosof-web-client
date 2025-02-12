@@ -62,13 +62,21 @@ export default {
         },
         topnav: {
           foreground: 'hsl(var(--top-nav-bg))',
-		  border : 'hsl(var(--top-nav-border))'
+          border: 'hsl(var(--top-nav-border))',
+        },
+
+        heading: {
+          DEFAULT: 'hsl(var(--page-header))',
         },
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+
+      tablex: {
+        foreground: 'hsl(var(--table-header))',
       },
     },
   },

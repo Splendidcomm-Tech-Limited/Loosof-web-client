@@ -274,7 +274,7 @@ export const Accountingroutes : AccountingRoutesType = {
     title: "BIC",
     items: [
       { title: "Cash Flow Dashboard", href: "/bic/cash-flow" },
-      { title: "Business Performance Dashboard", href: "/bic/business-performance" },
+      { title: "Business Perf. Dashboard", href: "/bic/business-performance" },
       { title: "Receivable Dashboard", href: "/bic/receivable" },
       { title: "Payable Dashboard", href: "/bic/payable" },
     ],
