@@ -28,10 +28,10 @@ export function AccountingNavBar() {
               {section.items && section.items.length > 0 && (
                 <>
                   <NavigationMenuContent className="py-4">
-                    <h4 className=" text-sm font-semibold leading-none px-2 pb-2">{section.title}</h4>
+                  
 
                     <ScrollArea>
-                      <ul className="grid w-[230px] max-h-[400px]  gap-1 py-1 px-5">
+                      <ul className="grid w-[230px] max-h-[400px]  gap-1 py-1 px-3">
                         {section.items.map((item) => (
                           <li key={item.title}>
                             {item.items ? (
@@ -39,7 +39,7 @@ export function AccountingNavBar() {
                                 <h4 className=" text-sm font-semibold leading-none px-2">
                                   {item.title}
                                 </h4>
-                                <ul className="grid gap-1 px-4 py-2">
+                                <ul className="grid gap-1 pl-2 py-2">
                                   {item.items.map((subItem) => (
                                     <li key={subItem.title}>
                                       <NavigationMenuLink asChild>
