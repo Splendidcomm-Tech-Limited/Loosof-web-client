@@ -74,6 +74,10 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+
+      tablex: {
+        foreground: 'hsl(var(--table-header))',
+      },
     },
   },
   plugins: [import('tailwindcss-animate')],

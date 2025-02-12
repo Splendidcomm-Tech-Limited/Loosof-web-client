@@ -50,12 +50,6 @@ const invoiceFormFields: FormField[] = [
     label: 'Use Inclusive Amount',
     type: 'switch',
   },
-  {
-    name: 'notes',
-    label: 'Notes',
-    type: 'textarea',
-    placeholder: 'Add any additional notes here...',
-  },
 ]
 
 const formSchema = z.object({

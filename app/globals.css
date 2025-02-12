@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* overflow: hidden; */
 }
 
 @layer base {
@@ -44,6 +45,8 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
     --top-nav-bg: 210, 40%, 96%, 1;
     --top-nav-border: 0, 0%, 84%, 1;
+    --table-header: 34, 100%, 92%,1
+
   }
 
   .dark {
@@ -79,6 +82,7 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --table-header : 34 100% 92% 1
   }
 }
 

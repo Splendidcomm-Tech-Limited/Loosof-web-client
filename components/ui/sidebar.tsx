@@ -257,7 +257,7 @@ const SidebarTrigger = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTM
       <div
         ref={ref}
         data-sidebar="trigger"
-        className={cn('h-10 w-10  cursor-pointer top-4  absolute -left-[5px] z-[9999]', className)}
+        className={cn('h-10 w-10  cursor-pointer top-4  fixed z-[9999]', className)}
         onClick={(event) => {
           onClick?.(event)
           toggleSidebar()

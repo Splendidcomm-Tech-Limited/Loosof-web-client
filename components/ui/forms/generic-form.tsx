@@ -106,7 +106,9 @@ export function GenericForm({ fields, onSubmit, title, submitText }: GenericForm
                     ) : field.type === 'textarea' ? (
                       <Textarea placeholder={field.placeholder} {...formField} />
                     ) : field.type === 'switch' ? (
-                      <Switch checked={formField.value} onCheckedChange={formField.onChange} />
+                      <div className="">
+                        <Switch checked={formField.value} onCheckedChange={formField.onChange} />
+                      </div>
                     ) : field.type === 'date' ? (
                       <div>
                         <Popover>
@@ -153,7 +155,7 @@ export function GenericForm({ fields, onSubmit, title, submitText }: GenericForm
             />
           ))}
         </div>
-        <Button type="submit">{submitText}</Button>
+        {/* <Button type="submit">{submitText}</Button> */}
       </form>
     </Form>
   )
