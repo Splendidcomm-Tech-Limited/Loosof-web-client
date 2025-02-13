@@ -2,7 +2,7 @@
 
 import { AccountingRoutesType } from '@/types'
 
-export const Accountingroutes: AccountingRoutesType = {
+export const ACCOUNTING_ROUTES: AccountingRoutesType = {
   quickView: {
     title: 'Quick View',
     items: [

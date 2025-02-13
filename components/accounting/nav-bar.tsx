@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,7 +10,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 
-import { Accountingroutes } from '@/data/accounting/routes'
+import { ACCOUNTING_ROUTES } from '@/data/accounting/routes'
 import { ScrollArea } from '@/components/ui/scroll-area'
 
 export function AccountingNavBar() {
@@ -19,7 +18,7 @@ export function AccountingNavBar() {
     <div className="sticky hidden border-b border-topnav-border  top-0 z-50 lg:flex h-14 items-center gap-4  w-full pl-10 pr-3 bg-topnav-foreground">
       <NavigationMenu>
         <NavigationMenuList>
-          {Object.entries(Accountingroutes).map(([key, section]) => (
+          {Object.entries(ACCOUNTING_ROUTES).map(([key, section]) => (
             <NavigationMenuItem key={key}>
               <NavigationMenuTrigger className="h-9  ">
                 <p className="text-sm font-medium leading-none ">{section.title}</p>
@@ -27,8 +26,6 @@ export function AccountingNavBar() {
               {section.items && section.items.length > 0 && (
                 <>
                   <NavigationMenuContent className="py-4">
-                  
-
                     <ScrollArea>
                       <ul className="grid w-[230px] max-h-[400px]  gap-1 py-1 px-3">
                         {section.items.map((item) => (
