@@ -62,15 +62,25 @@ export const columns: ColumnDef<Department>[] = [
   },
   {
     accessorKey: 'description',
-    header: ({ column }) => {
+    header: ({ column }) => (
+      <div className='flex items-center'>
+        Description
+        <ArrowUpDown 
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')} 
+          className="ml-2 h-4 w-4 cursor-pointer" 
+        />
+      </div>
+    ),
+    cell: ({ row }) => {
+      const description = row.getValue('description') as string;
       return (
-        <div className='flex  items-center' >
-          Description
-          <ArrowUpDown onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')} className="ml-2 h-4 w-4 cursor-pointer" />
-        </div>
-      )
-    },
+        <span>
+          {description.length > 100 ? `${description.slice(0, 100)}...` : description}
+        </span>
+      );
+    }
   },
+  
   {
     accessorKey: 'created_at',
     header: ({ column }) => {
