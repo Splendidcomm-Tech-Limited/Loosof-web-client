@@ -1,8 +1,8 @@
-'use client'
 
-import { AccountingRoutesType } from "@/types";
 
-export const Accountingroutes : AccountingRoutesType = {
+import { AccountingRoutesType } from '@/types'
+
+export const Accountingroutes: AccountingRoutesType = {
   quickView: {
     title: 'Quick View',
     items: [
@@ -108,7 +108,7 @@ export const Accountingroutes : AccountingRoutesType = {
         items: [
           {
             title: 'Invoice',
-            href: '/operation/account-receivable/invoice',
+            href: '/dashboard/accounting/operation/invoice',
           },
           {
             title: 'Customers Receipt',
@@ -206,77 +206,86 @@ export const Accountingroutes : AccountingRoutesType = {
     ],
   },
   reports: {
-    title: "Reports",
+    title: 'Reports',
     items: [
       {
-        title: "Financial Report",
+        title: 'Financial Report',
         items: [
-          { title: "Balance Sheet", href: "/reports/financial/balance-sheet" },
-          { title: "Cash Flow Statement", href: "/reports/financial/cash-flow" },
-          { title: "Profit & Loss Report", href: "/reports/financial/profit-loss" },
-          { title: "Executive Summary", href: "/reports/financial/executive-summary" },
-          { title: "Trial Balance", href: "/reports/financial/trial-balance" },
-          { title: "Tax Report", href: "/reports/financial/tax-report" },
+          { title: 'Balance Sheet', href: '/reports/financial/balance-sheet' },
+          { title: 'Cash Flow Statement', href: '/reports/financial/cash-flow' },
+          { title: 'Profit & Loss Report', href: '/reports/financial/profit-loss' },
+          { title: 'Executive Summary', href: '/reports/financial/executive-summary' },
+          { title: 'Trial Balance', href: '/reports/financial/trial-balance' },
+          { title: 'Tax Report', href: '/reports/financial/tax-report' },
         ],
       },
       {
-        title: "Accounts Report",
+        title: 'Accounts Report',
         items: [
-          { title: "General Ledger", href: "/reports/accounts/general-ledger" },
-          { title: "Cash Book", href: "/reports/accounts/cash-book" },
-          { title: "Chart of Accounts", href: "/reports/accounts/chart-of-accounts" },
-          { title: "Account Balances", href: "/reports/accounts/account-balances" },
-          { title: "Trial Balance", href: "/reports/accounts/trial-balance" },
-          { title: "Journal Report", href: "/reports/accounts/journal-report" },
-          { title: "Bank Reconciliation Report", href: "/reports/accounts/bank-reconciliation" },
+          { title: 'General Ledger', href: '/reports/accounts/general-ledger' },
+          { title: 'Cash Book', href: '/reports/accounts/cash-book' },
+          { title: 'Chart of Accounts', href: '/reports/accounts/chart-of-accounts' },
+          { title: 'Account Balances', href: '/reports/accounts/account-balances' },
+          { title: 'Trial Balance', href: '/reports/accounts/trial-balance' },
+          { title: 'Journal Report', href: '/reports/accounts/journal-report' },
+          { title: 'Bank Reconciliation Report', href: '/reports/accounts/bank-reconciliation' },
         ],
       },
       {
-        title: "Partner Reports",
+        title: 'Partner Reports',
         items: [
-          { title: "Partner Ledger", href: "/reports/partner/partner-ledger" },
-          { title: "Aged Receivable", href: "/reports/partner/aged-receivable" },
-          { title: "Aged Payable", href: "/reports/partner/aged-payable" },
+          { title: 'Partner Ledger', href: '/reports/partner/partner-ledger' },
+          { title: 'Aged Receivable', href: '/reports/partner/aged-receivable' },
+          { title: 'Aged Payable', href: '/reports/partner/aged-payable' },
         ],
       },
       {
-        title: "Management Report",
+        title: 'Management Report',
         items: [
-          { title: "Dashboard", href: "/reports/management/dashboard" },
-          { title: "Budget Analysis", href: "/reports/management/budget-analysis" },
-          { title: "Revised Budget History", href: "/reports/management/revised-budget-history" },
-          { title: "Business Performance", href: "/reports/management/business-performance" },
+          { title: 'Dashboard', href: '/reports/management/dashboard' },
+          { title: 'Budget Analysis', href: '/reports/management/budget-analysis' },
+          { title: 'Revised Budget History', href: '/reports/management/revised-budget-history' },
+          { title: 'Business Performance', href: '/reports/management/business-performance' },
         ],
       },
       {
-        title: "Fixed Assets",
+        title: 'Fixed Assets',
         items: [
-          { title: "Assets Listing", href: "/reports/fixed-assets/listing" },
-          { title: "Assets Transaction History", href: "/reports/fixed-assets/transaction-history" },
-          { title: "Assets Movement Report", href: "/reports/fixed-assets/movement-report" },
-          { title: "Assets Revaluation Report", href: "/reports/fixed-assets/revaluation-report" },
-          { title: "Assets Impairment", href: "/reports/fixed-assets/impairment" },
-          { title: "Assets Deposer Report", href: "/reports/fixed-assets/deposer-report" },
-          { title: "CAPEX Budget Report", href: "/reports/fixed-assets/capex-budget" },
-          { title: "Assets Depreciation Report", href: "/reports/fixed-assets/depreciation-report" },
+          { title: 'Assets Listing', href: '/reports/fixed-assets/listing' },
+          {
+            title: 'Assets Transaction History',
+            href: '/reports/fixed-assets/transaction-history',
+          },
+          { title: 'Assets Movement Report', href: '/reports/fixed-assets/movement-report' },
+          { title: 'Assets Revaluation Report', href: '/reports/fixed-assets/revaluation-report' },
+          { title: 'Assets Impairment', href: '/reports/fixed-assets/impairment' },
+          { title: 'Assets Deposer Report', href: '/reports/fixed-assets/deposer-report' },
+          { title: 'CAPEX Budget Report', href: '/reports/fixed-assets/capex-budget' },
+          {
+            title: 'Assets Depreciation Report',
+            href: '/reports/fixed-assets/depreciation-report',
+          },
         ],
       },
       {
-        title: "Audits Reports",
+        title: 'Audits Reports',
         items: [
-          { title: "Audit Trail (Transaction Activity)", href: "/reports/audit/transaction-activity" },
-          { title: "System Audit Trail (System Activity)", href: "/reports/audit/system-activity" },
+          {
+            title: 'Audit Trail (Transaction Activity)',
+            href: '/reports/audit/transaction-activity',
+          },
+          { title: 'System Audit Trail (System Activity)', href: '/reports/audit/system-activity' },
         ],
       },
     ],
   },
   bic: {
-    title: "BIC",
+    title: 'BIC',
     items: [
-      { title: "Cash Flow Dashboard", href: "/bic/cash-flow" },
-      { title: "Business Perf. Dashboard", href: "/bic/business-performance" },
-      { title: "Receivable Dashboard", href: "/bic/receivable" },
-      { title: "Payable Dashboard", href: "/bic/payable" },
+      { title: 'Cash Flow Dashboard', href: '/bic/cash-flow' },
+      { title: 'Business Perf. Dashboard', href: '/bic/business-performance' },
+      { title: 'Receivable Dashboard', href: '/bic/receivable' },
+      { title: 'Payable Dashboard', href: '/bic/payable' },
     ],
   },
 }

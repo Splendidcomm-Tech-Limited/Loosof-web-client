@@ -16,6 +16,7 @@ import {
   Wrench,
   Package2,
 } from 'lucide-react'
+import { Accountingroutes } from './accounting/routes'
 
 export const sidebarData = {
   user: {
@@ -46,283 +47,270 @@ export const sidebarData = {
       url: '#',
       icon: Wallet,
       isActive: true,
-      items: [
-        {
-          title: 'History',
-          url: '/dashboard/accounting',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Expenses',
-      url: '#',
-      icon: Calculator,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'CRM',
-      url: '#',
-      icon: Component,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Inventory',
-      url: '#',
-      icon: Building2,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Requisition',
-      url: '#',
-      icon: ClipboardList,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Manufacturing',
-      url: '#',
-      icon: Factory,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Purchase',
-      url: '#',
-      icon: ShoppingCart,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Point of Sales',
-      url: '#',
-      icon: Package2,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Sales',
-      url: '#',
-      icon: Tags,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'HRMS',
-      url: '#',
-      icon: UsersRound,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Survey',
-      url: '#',
-      icon: ClipboardList,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Projects',
-      url: '#',
-      icon: TableProperties,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Maintenance',
-      url: '#',
-      icon: Wrench,
-      isActive: false,
-      items: [
-        {
-          title: 'History',
-          url: '#',
-        },
-        {
-          title: 'Starred',
-          url: '#',
-        },
-        {
-          title: 'Settings',
-          url: '#',
-        },
-      ],
-    },
-    {
-      title: 'Documentation',
-      url: '#',
-      icon: BookOpen,
-      items: [
-        {
-          title: 'Introduction',
-          url: '#',
-        },
-        {
-          title: 'Get Started',
-          url: '#',
-        },
-        {
-          title: 'Tutorials',
-          url: '#',
-        },
-        {
-          title: 'Changelog',
-          url: '#',
-        },
-      ],
-    },
+      items: Accountingroutes
+    }
+    // {
+      // title: 'Expenses',
+      // url: '#',
+      // icon: Calculator,
+      // isActive: false,
+      // items: [
+      //   {
+      //     title: 'History',
+      //     url: '#',
+      //   },
+      //   {
+      //     title: 'Starred',
+      //     url: '#',
+      //   },
+      //   {
+      //     title: 'Settings',
+      //     url: '#',
+      //   },
+      // ],
+    // },
+    // {
+    //   title: 'CRM',
+    //   url: '#',
+    //   icon: Component,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Inventory',
+    //   url: '#',
+    //   icon: Building2,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Requisition',
+    //   url: '#',
+    //   icon: ClipboardList,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Manufacturing',
+    //   url: '#',
+    //   icon: Factory,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Purchase',
+    //   url: '#',
+    //   icon: ShoppingCart,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Point of Sales',
+    //   url: '#',
+    //   icon: Package2,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Sales',
+    //   url: '#',
+    //   icon: Tags,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'HRMS',
+    //   url: '#',
+    //   icon: UsersRound,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Survey',
+    //   url: '#',
+    //   icon: ClipboardList,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Projects',
+    //   url: '#',
+    //   icon: TableProperties,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Maintenance',
+    //   url: '#',
+    //   icon: Wrench,
+    //   isActive: false,
+    //   items: [
+    //     {
+    //       title: 'History',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Starred',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Settings',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'Documentation',
+    //   url: '#',
+    //   icon: BookOpen,
+    //   items: [
+    //     {
+    //       title: 'Introduction',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Get Started',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Tutorials',
+    //       url: '#',
+    //     },
+    //     {
+    //       title: 'Changelog',
+    //       url: '#',
+    //     },
+    //   ],
+    // },
   ],
 }
