@@ -78,8 +78,8 @@ export function DataTable<T extends BaseRow>({
   columns,
   data,
   onRowAdd,
-  onRowDelete,
-  onRowDuplicate,
+  // onRowDelete,
+  // onRowDuplicate,
   onRowUpdate,
   getActionItems,
   rowHeight = 40,
@@ -127,19 +127,19 @@ export function DataTable<T extends BaseRow>({
     }
   }
 
-  const handleDeleteRow = (id: string) => {
-    setRows(rows.filter((row) => row.id !== id))
-    onRowDelete?.(id)
-  }
+  // const handleDeleteRow = (id: string) => {
+  //   setRows(rows.filter((row) => row.id !== id))
+  //   onRowDelete?.(id)
+  // }
 
-  const handleDuplicateRow = (id: string) => {
-    const rowToDuplicate = rows.find((row) => row.id === id)
-    if (rowToDuplicate) {
-      const newRow = { ...rowToDuplicate, id: crypto.randomUUID() }
-      setRows([...rows, newRow])
-      onRowDuplicate?.(id)
-    }
-  }
+  // const handleDuplicateRow = (id: string) => {
+  //   const rowToDuplicate = rows.find((row) => row.id === id)
+  //   if (rowToDuplicate) {
+  //     const newRow = { ...rowToDuplicate, id: crypto.randomUUID() }
+  //     setRows([...rows, newRow])
+  //     onRowDuplicate?.(id)
+  //   }
+  // }
 
   const renderCell = (row: T, column: ColumnDef<T>) => {
     const value = row[column.key]

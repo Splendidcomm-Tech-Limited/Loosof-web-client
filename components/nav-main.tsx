@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
-import { ChevronRight, type LucideIcon } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
@@ -22,16 +23,16 @@ interface SubItem {
   items?: SubItem[]
 }
 
-interface NavItem {
-  href?: string
-  title: string
-  url?: string
-  icon?: LucideIcon
-  isActive?: boolean
-  items?: SubItem[]
-}
+// interface NavItem {
+//   href?: string
+//   title: string
+//   url?: string
+//   icon?: LucideIcon
+//   isActive?: boolean
+//   items?: SubItem[]
+// }
 
-export function NavMain({ items }: { items: NavItem[] }) {
+export function NavMain({ items }: { items: any[] }) {
   const pathname = usePathname()
 
   console.log(pathname, 'papp')

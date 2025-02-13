@@ -2,18 +2,18 @@ import {
   GalleryVerticalEnd,
   AudioWaveform,
   Command,
-  BookOpen,
+  // BookOpen,
   Wallet,
-  Calculator,
-  Building2,
-  ClipboardList,
+  // Calculator,
+  // Building2,
+  // ClipboardList,
   Factory,
-  ShoppingCart,
+  // ShoppingCart,
   Component,
   Tags,
-  UsersRound,
+  // UsersRound,
   TableProperties,
-  Wrench,
+  // Wrench,
   Package2,
 } from 'lucide-react'
 import { ACCOUNTING_ROUTES } from './accounting/routes'
@@ -62,6 +62,7 @@ export const sidebarData = {
       isActive: false,
       items: CRM_ROUTES,
     },
+    ,
     // {
     //   title: 'Inventory',
     //   url: '#',
@@ -102,12 +103,12 @@ export const sidebarData = {
     //     },
     //   ],
     // },
-   , {
+    {
       title: 'Manufacturing',
       url: '#',
       icon: Factory,
       isActive: false,
-      items:MANUFACTURING_ROUTES
+      items: MANUFACTURING_ROUTES,
     },
     // {
     //   title: 'Purchase',
@@ -188,7 +189,7 @@ export const sidebarData = {
       url: '#',
       icon: TableProperties,
       isActive: false,
-      items: PROJECTS_ROUTES
+      items: PROJECTS_ROUTES,
     },
     // {
     //   title: 'Maintenance',
