@@ -1,17 +1,15 @@
-
-
 import { AccountingRoutesType } from '@/types'
 
 export const ACCOUNTING_ROUTES: AccountingRoutesType = {
   quickView: {
     title: 'Quick View',
     items: [
-      { title: 'Bank Manager', href: '/quick-view/bank-manager' },
-      { title: 'Account Receivables', href: '/quick-view/account-receivables' },
-      { title: 'Account Payables', href: '/quick-view/account-payables' },
-      { title: 'Fixed Assets', href: '/quick-view/fixed-assets' },
-      { title: 'Budget', href: '/quick-view/budget' },
-      { title: 'Account', href: '/quick-view/account' },
+      { title: 'Bank Manager', href: '/dashboard/accounting/quick-view/bank-manager' },
+      { title: 'Account Receivables', href: '/dashboard/accounting/quick-view/account-receivables' },
+      { title: 'Account Payables', href: '/dashboard/accounting/quick-view/account-payables' },
+      { title: 'Fixed Assets', href: '/dashboard/accounting/quick-view/fixed-assets' },
+      { title: 'Budget', href: '/dashboard/accounting/quick-view/budget' },
+      { title: 'Account', href: '/dashboard/accounting/quick-view/account' },
     ],
   },
   configuration: {
@@ -19,31 +17,31 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
     items: [
       {
         title: 'Charts of Accounts',
-        href: '/configuration/charts-of-accounts',
+        href: '/dashboard/accounting/configuration/charts-of-accounts',
       },
       {
         title: 'Foreign Currency',
-        href: '/configuration/foreign-currency',
+        href: '/dashboard/accounting/configuration/foreign-currency',
       },
       {
         title: 'Bank Manager',
-        href: '/configuration/bank-manager',
+        href: '/dashboard/accounting/configuration/bank-manager',
       },
       {
         title: 'Financial Year',
-        href: '/configuration/financial-year',
+        href: '/dashboard/accounting/configuration/financial-year',
       },
       {
         title: 'Taxes',
-        href: '/configuration/taxes',
+        href: '/dashboard/accounting/configuration/taxes',
       },
       {
         title: 'Account type',
-        href: '/configuration/account-type',
+        href: '/dashboard/accounting/configuration/account-type',
       },
       {
         title: 'Transaction type',
-        href: '/configuration/transaction-type',
+        href: '/dashboard/accounting/configuration/transaction-type',
       },
       {
         title: 'Branches',
@@ -51,35 +49,35 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
       },
       {
         title: 'Departments',
-        href: '/configuration/departments',
+        href: '/dashboard/accounting/configuration/departments',
       },
       {
         title: 'Cost Center',
-        href: '/configuration/cost-center',
+        href: '/dashboard/accounting/configuration/cost-center',
       },
       {
         title: 'Business Units',
-        href: '/configuration/business-units',
+        href: '/dashboard/accounting/configuration/business-units',
       },
       {
         title: 'Custom Business Segment',
-        href: '/configuration/custom-business-segment',
+        href: '/dashboard/accounting/configuration/custom-business-segment',
       },
       {
         title: 'Budget Planning',
-        href: '/configuration/budget-planning',
+        href: '/dashboard/accounting/configuration/budget-planning',
       },
       {
         title: 'Depreciation Method',
-        href: '/configuration/depreciation-method',
+        href: '/dashboard/accounting/configuration/depreciation-method',
       },
       {
         title: 'Assets Types',
-        href: '/configuration/assets-types',
+        href: '/dashboard/accounting/configuration/assets-types',
       },
       {
         title: 'Assets',
-        href: '/configuration/assets',
+        href: '/dashboard/accounting/configuration/assets',
       },
     ],
   },
@@ -91,15 +89,15 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
         items: [
           {
             title: 'Cash Book',
-            href: '/operation/bank-management/cash-book',
+            href: '/dashboard/accounting/operation/cash-book',
           },
           {
             title: 'Bank Reconciliation',
-            href: '/operation/bank-management/reconciliation',
+            href: '/dashboard/accounting/operation/reconciliation',
           },
           {
             title: 'Bank Statement Import',
-            href: '/operation/bank-management/statement-import',
+            href: '/dashboard/accounting/operation/statement-import',
           },
         ],
       },
@@ -112,23 +110,23 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
           },
           {
             title: 'Customers Receipt',
-            href: '/operation/account-receivable/receipt',
+            href: '/dashboard/accounting/dashboard/accounting/operation/receipt',
           },
           {
             title: 'Credit Note',
-            href: '/operation/account-receivable/credit-note',
+            href: '/dashboard/accounting/operation/credit-note',
           },
           {
             title: 'Customers',
-            href: '/operation/account-receivable/customers',
+            href: '/dashboard/accounting/operation/customers',
           },
           {
             title: 'Allocations',
-            href: '/operation/account-receivable/allocations',
+            href: '/dashboard/accounting/operation/allocations',
           },
           {
             title: 'AR Batch',
-            href: '/operation/account-receivable/batch',
+            href: '/dashboard/accounting/operation/batch',
           },
         ],
       },
@@ -137,27 +135,27 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
         items: [
           {
             title: 'Bill',
-            href: '/operation/account-payable/bill',
+            href: '/dashboard/accounting/operation/bill',
           },
           {
             title: 'Vendor Payment',
-            href: '/operation/account-payable/payment',
+            href: '/dashboard/accounting/operation/payment',
           },
           {
             title: 'Return Supplier',
-            href: '/operation/account-payable/return',
+            href: '/dashboard/accounting/operation/return',
           },
           {
             title: 'Vendors',
-            href: '/operation/account-payable/vendors',
+            href: '/dashboard/accounting/operation/vendors',
           },
           {
             title: 'Allocation',
-            href: '/operation/account-payable/allocation',
+            href: '/dashboard/accounting/operation/allocation',
           },
           {
             title: 'AP Batch',
-            href: '/operation/account-payable/batch',
+            href: '/dashboard/accounting/operation/batch',
           },
         ],
       },
@@ -166,27 +164,27 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
         items: [
           {
             title: 'Generate Depreciation Batch',
-            href: '/operation/fixed-asset/depreciation-batch',
+            href: '/dashboard/accounting/operation/depreciation-batch',
           },
           {
             title: 'Asset Revaluation',
-            href: '/operation/fixed-asset/revaluation',
+            href: '/dashboard/accounting/operation/revaluation',
           },
           {
             title: 'Asset Impairment',
-            href: '/operation/fixed-asset/impairment',
+            href: '/dashboard/accounting/operation/impairment',
           },
           {
             title: 'Asset Transfer',
-            href: '/operation/fixed-asset/transfer',
+            href: '/dashboard/accounting/operation/transfer',
           },
           {
             title: 'Asset Disposal',
-            href: '/operation/fixed-asset/disposal',
+            href: '/dashboard/accounting/operation/disposal',
           },
           {
             title: 'Asset Incidence',
-            href: '/operation/fixed-asset/incidence',
+            href: '/dashboard/accounting/operation/incidence',
           },
         ],
       },
@@ -195,11 +193,11 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
         items: [
           {
             title: 'General Journal',
-            href: '/operation/account/journal',
+            href: '/dashboard/accounting/operation/journal',
           },
           {
             title: 'Journal Import',
-            href: '/operation/account/journal-import',
+            href: '/dashboard/accounting/operation/journal-import',
           },
         ],
       },
@@ -211,59 +209,59 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
       {
         title: 'Financial Report',
         items: [
-          { title: 'Balance Sheet', href: '/reports/financial/balance-sheet' },
-          { title: 'Cash Flow Statement', href: '/reports/financial/cash-flow' },
-          { title: 'Profit & Loss Report', href: '/reports/financial/profit-loss' },
-          { title: 'Executive Summary', href: '/reports/financial/executive-summary' },
-          { title: 'Trial Balance', href: '/reports/financial/trial-balance' },
-          { title: 'Tax Report', href: '/reports/financial/tax-report' },
+          { title: 'Balance Sheet', href: '/dashboard/accounting/reports/balance-sheet' },
+          { title: 'Cash Flow Statement', href: '/dashboard/accounting/reports/cash-flow' },
+          { title: 'Profit & Loss Report', href: '/dashboard/accounting/reports/profit-loss' },
+          { title: 'Executive Summary', href: '/dashboard/accounting/reports/executive-summary' },
+          { title: 'Trial Balance', href: '/dashboard/accounting/reports/trial-balance' },
+          { title: 'Tax Report', href: '/dashboard/accounting/reports/tax-report' },
         ],
       },
       {
         title: 'Accounts Report',
         items: [
-          { title: 'General Ledger', href: '/reports/accounts/general-ledger' },
-          { title: 'Cash Book', href: '/reports/accounts/cash-book' },
-          { title: 'Chart of Accounts', href: '/reports/accounts/chart-of-accounts' },
-          { title: 'Account Balances', href: '/reports/accounts/account-balances' },
-          { title: 'Trial Balance', href: '/reports/accounts/trial-balance' },
-          { title: 'Journal Report', href: '/reports/accounts/journal-report' },
-          { title: 'Bank Reconciliation Report', href: '/reports/accounts/bank-reconciliation' },
+          { title: 'General Ledger', href: '/dashboard/accounting/reports/general-ledger' },
+          { title: 'Cash Book', href: '/dashboard/accounting/reports/cash-book' },
+          { title: 'Chart of Accounts', href: '/dashboard/accounting/reports/chart-of-accounts' },
+          { title: 'Account Balances', href: '/dashboard/accounting/reports/account-balances' },
+          { title: 'Trial Balance', href: '/dashboard/accounting/reports/trial-balance' },
+          { title: 'Journal Report', href: '/dashboard/accounting/reports/journal-report' },
+          { title: 'Bank Reconciliation Report', href: '/dashboard/accounting/reports/bank-reconciliation' },
         ],
       },
       {
         title: 'Partner Reports',
         items: [
-          { title: 'Partner Ledger', href: '/reports/partner/partner-ledger' },
-          { title: 'Aged Receivable', href: '/reports/partner/aged-receivable' },
-          { title: 'Aged Payable', href: '/reports/partner/aged-payable' },
+          { title: 'Partner Ledger', href: '/dashboard/accounting/reports/partner-ledger' },
+          { title: 'Aged Receivable', href: '/dashboard/accounting/reports/aged-receivable' },
+          { title: 'Aged Payable', href: '/dashboard/accounting/reports/aged-payable' },
         ],
       },
       {
         title: 'Management Report',
         items: [
-          { title: 'Dashboard', href: '/reports/management/dashboard' },
-          { title: 'Budget Analysis', href: '/reports/management/budget-analysis' },
-          { title: 'Revised Budget History', href: '/reports/management/revised-budget-history' },
-          { title: 'Business Performance', href: '/reports/management/business-performance' },
+          { title: 'Dashboard', href: '/dashboard/accounting/reports/dashboard' },
+          { title: 'Budget Analysis', href: '/dashboard/accounting/reports/budget-analysis' },
+          { title: 'Revised Budget History', href: '/dashboard/accounting/reports/revised-budget-history' },
+          { title: 'Business Performance', href: '/dashboard/accounting/reports/business-performance' },
         ],
       },
       {
         title: 'Fixed Assets',
         items: [
-          { title: 'Assets Listing', href: '/reports/fixed-assets/listing' },
+          { title: 'Assets Listing', href: '/reports/listing' },
           {
             title: 'Assets Transaction History',
-            href: '/reports/fixed-assets/transaction-history',
+            href: '/dashboard/accounting/reports/transaction-history',
           },
-          { title: 'Assets Movement Report', href: '/reports/fixed-assets/movement-report' },
-          { title: 'Assets Revaluation Report', href: '/reports/fixed-assets/revaluation-report' },
-          { title: 'Assets Impairment', href: '/reports/fixed-assets/impairment' },
-          { title: 'Assets Deposer Report', href: '/reports/fixed-assets/deposer-report' },
-          { title: 'CAPEX Budget Report', href: '/reports/fixed-assets/capex-budget' },
+          { title: 'Assets Movement Report', href: '/dashboard/accounting/reports/movement-report' },
+          { title: 'Assets Revaluation Report', href: '/dashboard/accounting/reports/revaluation-report' },
+          { title: 'Assets Impairment', href: '/dashboard/accounting/reports/impairment' },
+          { title: 'Assets Deposer Report', href: '/dashboard/accounting/reports/deposer-report' },
+          { title: 'CAPEX Budget Report', href: '/dashboard/accounting/reports/capex-budget' },
           {
             title: 'Assets Depreciation Report',
-            href: '/reports/fixed-assets/depreciation-report',
+            href: '/dashboard/accounting/reports/depreciation-report',
           },
         ],
       },
@@ -272,9 +270,9 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
         items: [
           {
             title: 'Audit Trail (Transaction Activity)',
-            href: '/reports/audit/transaction-activity',
+            href: '/dashboard/accounting/reports/transaction-activity',
           },
-          { title: 'System Audit Trail (System Activity)', href: '/reports/audit/system-activity' },
+          { title: 'System Audit Trail (System Activity)', href: '/dashboard/accounting/reports/system-activity' },
         ],
       },
     ],
@@ -282,10 +280,10 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
   bic: {
     title: 'BIC',
     items: [
-      { title: 'Cash Flow Dashboard', href: '/bic/cash-flow' },
-      { title: 'Business Perf. Dashboard', href: '/bic/business-performance' },
-      { title: 'Receivable Dashboard', href: '/bic/receivable' },
-      { title: 'Payable Dashboard', href: '/bic/payable' },
+      { title: 'Cash Flow Dashboard', href: '/dashboard/accounting/bic/cash-flow' },
+      { title: 'Business Perf. Dashboard', href: '/dashboard/accounting/bic/business-performance' },
+      { title: 'Receivable Dashboard', href: '/dashboard/accounting/bic/receivable' },
+      { title: 'Payable Dashboard', href: '/dashboard/accounting/bic/payable' },
     ],
   },
 }

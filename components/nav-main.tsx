@@ -16,12 +16,14 @@ import {
 } from '@/components/ui/sidebar'
 
 interface SubItem {
+  href: string
   title: string
   url?: string
   items?: SubItem[]
 }
 
 interface NavItem {
+  href?: string
   title: string
   url?: string
   icon?: LucideIcon
