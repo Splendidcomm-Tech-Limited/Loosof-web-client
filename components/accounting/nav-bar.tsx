@@ -43,7 +43,7 @@ export function AccountingNavBar() {
                                     <li key={subItem.title}>
                                       <NavigationMenuLink asChild>
                                         <Link
-                                          href={`/dashboard/accounting${subItem.href}` || '#'}
+                                          href={`${subItem.href}` || '#'}
                                           className="block select-none space-y-1 rounded-md  leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-white focus:bg-accent focus:text-accent-foreground"
                                         >
                                           <div className="text-sm font-normal leading-none p-2">
