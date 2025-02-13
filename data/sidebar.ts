@@ -16,7 +16,12 @@ import {
   Wrench,
   Package2,
 } from 'lucide-react'
-import { Accountingroutes } from './accounting/routes'
+import { ACCOUNTING_ROUTES } from './accounting/routes'
+import { CRM_ROUTES } from './crm/routes'
+import { POS_ROUTES } from './pos/routes'
+import { SALES_ROUTES } from './sales/routes'
+import { MANUFACTURING_ROUTES } from './manufacturing/routes'
+import { PROJECTS_ROUTES } from './projects/routes'
 
 export const sidebarData = {
   user: {
@@ -47,48 +52,16 @@ export const sidebarData = {
       url: '#',
       icon: Wallet,
       isActive: true,
-      items: Accountingroutes
-    }
-    // {
-      // title: 'Expenses',
-      // url: '#',
-      // icon: Calculator,
-      // isActive: false,
-      // items: [
-      //   {
-      //     title: 'History',
-      //     url: '#',
-      //   },
-      //   {
-      //     title: 'Starred',
-      //     url: '#',
-      //   },
-      //   {
-      //     title: 'Settings',
-      //     url: '#',
-      //   },
-      // ],
-    // },
-    // {
-    //   title: 'CRM',
-    //   url: '#',
-    //   icon: Component,
-    //   isActive: false,
-    //   items: [
-    //     {
-    //       title: 'History',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Starred',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Settings',
-    //       url: '#',
-    //     },
-    //   ],
-    // },
+      items: ACCOUNTING_ROUTES,
+    },
+
+    {
+      title: 'CRM',
+      url: '#',
+      icon: Component,
+      isActive: false,
+      items: CRM_ROUTES,
+    },
     // {
     //   title: 'Inventory',
     //   url: '#',
@@ -129,26 +102,13 @@ export const sidebarData = {
     //     },
     //   ],
     // },
-    // {
-    //   title: 'Manufacturing',
-    //   url: '#',
-    //   icon: Factory,
-    //   isActive: false,
-    //   items: [
-    //     {
-    //       title: 'History',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Starred',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Settings',
-    //       url: '#',
-    //     },
-    //   ],
-    // },
+   , {
+      title: 'Manufacturing',
+      url: '#',
+      icon: Factory,
+      isActive: false,
+      items:MANUFACTURING_ROUTES
+    },
     // {
     //   title: 'Purchase',
     //   url: '#',
@@ -169,46 +129,20 @@ export const sidebarData = {
     //     },
     //   ],
     // },
-    // {
-    //   title: 'Point of Sales',
-    //   url: '#',
-    //   icon: Package2,
-    //   isActive: false,
-    //   items: [
-    //     {
-    //       title: 'History',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Starred',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Settings',
-    //       url: '#',
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: 'Sales',
-    //   url: '#',
-    //   icon: Tags,
-    //   isActive: false,
-    //   items: [
-    //     {
-    //       title: 'History',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Starred',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Settings',
-    //       url: '#',
-    //     },
-    //   ],
-    // },
+    {
+      title: 'Point of Sales',
+      url: '#',
+      icon: Package2,
+      isActive: false,
+      items: POS_ROUTES,
+    },
+    {
+      title: 'Sales',
+      url: '#',
+      icon: Tags,
+      isActive: false,
+      items: SALES_ROUTES,
+    },
     // {
     //   title: 'HRMS',
     //   url: '#',
@@ -249,26 +183,13 @@ export const sidebarData = {
     //     },
     //   ],
     // },
-    // {
-    //   title: 'Projects',
-    //   url: '#',
-    //   icon: TableProperties,
-    //   isActive: false,
-    //   items: [
-    //     {
-    //       title: 'History',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Starred',
-    //       url: '#',
-    //     },
-    //     {
-    //       title: 'Settings',
-    //       url: '#',
-    //     },
-    //   ],
-    // },
+    {
+      title: 'Projects',
+      url: '#',
+      icon: TableProperties,
+      isActive: false,
+      items: PROJECTS_ROUTES
+    },
     // {
     //   title: 'Maintenance',
     //   url: '#',

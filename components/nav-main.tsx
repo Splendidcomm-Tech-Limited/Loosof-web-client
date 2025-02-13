@@ -32,7 +32,7 @@ interface NavItem {
 export function NavMain({ items }: { items: NavItem[] }) {
   const pathname = usePathname()
 
-  console.log(pathname , 'papp')
+  console.log(pathname, 'papp')
 
   const renderSubItems = (subItems: SubItem[]) => {
     // console.log(subItems, 'subItems')
@@ -66,7 +66,7 @@ export function NavMain({ items }: { items: NavItem[] }) {
     <SidebarGroup>
       <SidebarMenu>
         {items.map((item) => (
-          <Collapsible key={item.title} defaultOpen={true} className="group/collapsible">
+          <Collapsible key={item.title} defaultOpen={false} className="group/collapsible">
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
                 <Link href={item.href || '#'}>
