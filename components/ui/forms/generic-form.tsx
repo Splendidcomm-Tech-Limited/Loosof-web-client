@@ -47,7 +47,7 @@ interface GenericFormProps {
   submitText: string
 }
 
-export function GenericForm({ fields, onSubmit, title, submitText }: GenericFormProps) {
+export function GenericForm({ fields, onSubmit, title }: GenericFormProps) {
   const formSchema = z.object(
     fields.reduce(
       (acc, field) => {

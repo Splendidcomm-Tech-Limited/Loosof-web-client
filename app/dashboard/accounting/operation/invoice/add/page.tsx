@@ -140,6 +140,7 @@ export default function Page() {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleRowUpdate = (id: string, field: keyof TransactionRow, value: any) => {
     setRows(
       rows.map((row) => {
