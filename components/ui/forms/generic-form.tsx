@@ -77,7 +77,7 @@ export function GenericForm({ fields, onSubmit, title }: GenericFormProps) {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <h2 className="heading-text">{title}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
           {fields.map((field) => (
             <FormField
               key={field.name}

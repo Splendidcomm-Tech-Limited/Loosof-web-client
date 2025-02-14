@@ -1,121 +1,13 @@
 'use client'
 
 import { InvoiceForm } from '@/components/accounting/invoice/invoice-form'
+import { ActivityLog } from '@/components/ui/activity-log/activity-log'
 import { DataTable } from '@/components/ui/table/generic-data-table'
 import { TableSummary } from '@/components/ui/table/table-summary'
-import { BaseRow, ColumnDef } from '@/types'
+import { columns, initialSampleData, sampleActivities, TransactionRow } from '@/data/accounting/data'
 import { Split, Paperclip, Copy, Trash2, FileText } from 'lucide-react'
 import React, { useState } from 'react'
-interface TransactionRow extends BaseRow {
-  type: 'GL' | 'Item'
-  item: string
-  description: string
-  account: string
-  warehouse: string
-  available: number
-  quantity: number
-  units: number
-  price: number
-  serialLot: string
-  vat: string
-  discPercent: number
-  discount: number
-  subtotal: number
-  createdAt: string
-  createdBy: string
-}
 
-const initialSampleData: TransactionRow[] = [
-  {
-    id: '1',
-    type: 'Item',
-    item: 'Product A',
-    description: 'High-quality product',
-    account: 'Sales',
-    warehouse: 'Main',
-    available: 100,
-    quantity: 1,
-    units: 1,
-    price: 99.99,
-    serialLot: 'LOT123',
-    vat: '20%',
-    discPercent: 0,
-    discount: 0,
-    subtotal: 99.99,
-    createdAt: '2023-06-01',
-    createdBy: 'John Doe',
-  },
-  {
-    id: '2',
-    type: 'GL',
-    item: '',
-    description: 'General Ledger Entry',
-    account: 'Expenses',
-    warehouse: '',
-    available: 0,
-    quantity: 0,
-    units: 0,
-    price: 0,
-    serialLot: '',
-    vat: '0%',
-    discPercent: 0,
-    discount: 0,
-    subtotal: 0,
-    createdAt: '2023-06-02',
-    createdBy: 'Jane Smith',
-  },
-]
-
-const columns: ColumnDef<TransactionRow>[] = [
-  {
-    key: 'type',
-    header: 'Type',
-    width: 100,
-    type: 'select',
-    options: [
-      { value: 'GL', label: 'GL' },
-      { value: 'Item', label: 'Item' },
-    ],
-    editable: true,
-  },
-
-  {
-    key: 'item',
-    header: 'item',
-    width: 100,
-    type: 'select',
-    options: [
-      { value: 'item one', label: 'item one' },
-      { value: 'Item', label: 'Item' },
-    ],
-    editable: true,
-  },
-  { key: 'description', header: 'Description', width: 200, editable: true },
-  { key: 'account', header: 'Account', width: 150, editable: true },
-  { key: 'available', header: 'Available', width: 100, type: 'number', editable: false },
-
-  {
-    key: 'warehouse',
-    header: 'Warehouse',
-    width: 100,
-    type: 'select',
-    options: [
-      { value: 'location one', label: 'Location one' },
-      { value: 'location two', label: 'Location two' },
-    ],
-    editable: true,
-  },
-  { key: 'quantity', header: 'Quantity', width: 100, type: 'number', editable: true },
-  { key: 'units', header: 'Units', width: 100, type: 'number', editable: true },
-  { key: 'price', header: 'Price', width: 100, type: 'number', editable: true },
-  { key: 'serialLot', header: 'Serial/Lot', width: 150, editable: true },
-  { key: 'vat', header: 'VAT', width: 100, editable: true },
-  { key: 'discPercent', header: 'Disc %', width: 100, type: 'number', editable: true },
-  { key: 'discount', header: 'Discount', width: 100, type: 'number', editable: true },
-  { key: 'subtotal', header: 'Subtotal', width: 100, type: 'number', editable: false },
-  // { key: 'createdAt', header: 'Created At', width: 150, editable: false },
-  // { key: 'createdBy', header: 'Created By', width: 150, editable: false },
-]
 
 export default function Page() {
   const [rows, setRows] = useState<TransactionRow[]>(initialSampleData)
@@ -224,7 +116,7 @@ export default function Page() {
 
   const totals = calculateTotals()
   return (
-    <div>
+    <div className='h-full'>
       <InvoiceForm />
 
       <DataTable<TransactionRow>
@@ -247,6 +139,8 @@ export default function Page() {
         note={note}
         onNoteChange={setNote}
       />
+
+      <ActivityLog activities={sampleActivities} />
     </div>
   )
 }

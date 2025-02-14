@@ -11,7 +11,8 @@ export interface ColumnDef<T extends BaseRow> {
   key: keyof T
   header: string
   width: number
-  editable?: boolean
+  editable?: boolean,
+  backgroundColor? :string,
   type?: 'text' | 'number' | 'select' | 'date'
   options?: { value: string; label: string }[]
   render?: (value: any, row: T) => React.ReactNode

@@ -2,7 +2,7 @@
 'use client'
 
 import * as React from 'react'
-import { Plus, GripVertical } from 'lucide-react'
+import { Plus, GripHorizontal } from 'lucide-react'
 import {
   Table,
   TableBody,
@@ -21,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import {
   DndContext,
   closestCenter,
@@ -38,7 +38,7 @@ import {
 } from '@dnd-kit/sortable'
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
-import { ActionMenuItem, BaseRow, ColumnDef } from '@/types'
+import type { ActionMenuItem, BaseRow, ColumnDef } from '@/types'
 
 interface DataTableProps<T extends BaseRow> {
   title: string
@@ -66,7 +66,7 @@ const DraggableTableRow = ({ children, id }: { children: React.ReactNode; id: st
   return (
     <TableRow ref={setNodeRef} style={style} {...attributes}>
       <TableCell>
-        <GripVertical className="h-4 w-4 cursor-move" {...listeners} />
+        <GripHorizontal className="h-4 w-4 cursor-move" {...listeners} />
       </TableCell>
       {children}
     </TableRow>
@@ -186,70 +186,68 @@ export function DataTable<T extends BaseRow>({
             onChange={(e) => handleRowUpdate(row.id, column.key, e.target.value)}
             className="w-full"
             disabled={!column.editable}
+            style={{ backgroundColor: column.backgroundColor }}
           />
         )
     }
   }
 
   return (
-    <div className="space-y-4 my-10 w-full ">
+    <div className="space-y-4 my-10 w-full overflow-hidden ">
       <div className="flex justify-between items-center">
         <h2 className="heading-text ">{title}</h2>
       </div>
 
-        <div className="">
-      <ScrollArea className="w-full rounded-md border">
-
-          <DndContext
-            sensors={sensors}
-            collisionDetection={closestCenter}
-            onDragEnd={handleDragEnd}
-          >
-            <Table className='w-full'>
-              <TableHeader>
-                <TableRow className="bg-[#FFEDD5]">
-                  <TableHead className="w-[30px]"></TableHead>
+      <ScrollArea className=" w-5/6 rounded-md border">
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <Table className="  table-auto">
+          <TableHeader>
+            <TableRow className="bg-[#FFEDD5]">
+              <TableHead className="w-[30px]"></TableHead>
+              {columns.map((column) => (
+                <TableHead
+                  key={column.key as string}
+                  className="font-semibold text-heading capitalize"
+                  style={{ width: column.width }}
+                >
+                  {column.header}
+                </TableHead>
+              ))}
+              {getActionItems && (
+                <TableHead className="w-[50px] text-heading font-semibold">Actions</TableHead>
+              )}
+            </TableRow>
+          </TableHeader>
+          <SortableContext items={rows.map((row) => row.id)} strategy={verticalListSortingStrategy}>
+            <TableBody>
+              {rows.map((row) => (
+                <DraggableTableRow key={row.id} id={row.id}>
                   {columns.map((column) => (
-                    <TableHead
-                      key={column.key as string}
-                      className="font-semibold text-heading capitalize"
-                      style={{ width: column.width }}
+                    <TableCell
+                      key={`${row.id}-${column.key as string}`}
+                      style={{
+                        height: `${rowHeight}px`,
+                        backgroundColor: column.backgroundColor,
+                      }}
+                      className="border"
                     >
-                      {column.header}
-                    </TableHead>
+                      {renderCell(row, column)}
+                    </TableCell>
                   ))}
-                  {getActionItems && <TableHead className="w-[50px] text-heading font-semibold">Actions</TableHead>}
-                </TableRow>
-              </TableHeader>
-              <SortableContext
-                items={rows.map((row) => row.id)}
-                strategy={verticalListSortingStrategy}
-              >
-                <TableBody>
-                  {rows.map((row) => (
-                    <DraggableTableRow key={row.id} id={row.id}>
-                      {columns.map((column) => (
-                        <TableCell
-                          key={`${row.id}-${column.key as string}`}
-                          style={{ height: `${rowHeight}px` }}
-                        >
-                          {renderCell(row, column)}
-                        </TableCell>
-                      ))}
-                      {getActionItems && (
-                        <TableCell>
-                          <ActionMenu items={getActionItems(row)} />
-                        </TableCell>
-                      )}
-                    </DraggableTableRow>
-                  ))}
-                </TableBody>
-              </SortableContext>
-            </Table>
-          </DndContext>
-      </ScrollArea>
+                  {getActionItems && (
+                    <TableCell>
+                      <ActionMenu items={getActionItems(row)} />
+                    </TableCell>
+                  )}
+                </DraggableTableRow>
+              ))}
+            </TableBody>
+          </SortableContext>
+        </Table>
+      </DndContext>
 
-        </div>
+      <ScrollBar orientation="horizontal" />
+      </ScrollArea>
 
       {onRowAdd && (
         <Button
