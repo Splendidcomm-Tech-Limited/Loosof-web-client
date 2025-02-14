@@ -12,7 +12,7 @@ type RouteCategory = {
 
 export type AccountingRoutesType = {
   quickView: RouteCategory
-  configuration: RouteCategory
+  configurations: RouteCategory
   operations: RouteCategory
   reports: RouteCategory
   bic: RouteCategory

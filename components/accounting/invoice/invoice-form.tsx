@@ -1,9 +1,10 @@
 'use client'
-import { Save, Play, Edit, Trash } from 'lucide-react'
+import { Save, Play, Edit } from 'lucide-react'
 import { z } from 'zod'
 
-import { Button } from '@/components/ui/button'
+
 import { GenericForm, type FormField } from '@/components/ui/forms/generic-form'
+import { GenericPageHeader } from '@/components/ui/page/generic-page-header'
 
 const invoiceFormFields: FormField[] = [
   { name: 'invoiceNumber', label: 'Invoice Number', type: 'text', placeholder: 'INV-0001' },
@@ -80,27 +81,28 @@ export function InvoiceForm() {
 
   return (
     <div className="space-y-8">
-      <div className="flex justify-between items-center">
-        <h1 className="heading-text">Create New Invoice</h1>
-        <div className="flex space-x-2">
-          <Button type="submit" variant="default">
-            <Save className="mr-2 h-4 w-4" />
-            Save
-          </Button>
-          <Button type="button" variant="default">
-            <Play className="mr-2 h-4 w-4" />
-            Process
-          </Button>
-          <Button type="button" variant="default">
-            <Edit className="mr-2 h-4 w-4" />
-            Edit
-          </Button>
-          <Button type="button" variant="default">
-            <Trash className="mr-2 h-4 w-4" />
-            Discard
-          </Button>
-        </div>
-      </div>
+      <GenericPageHeader
+        title={'Create New Invoice'}
+        actions={[
+          {
+            label: 'save',
+            icon: Save,
+            onClick: () => {},
+          },
+
+          {
+            label: 'Process',
+            icon: Play,
+            onClick: () => {},
+          },
+
+          {
+            label: 'Edit',
+            icon: Edit,
+            onClick: () => {},
+          },
+        ]}
+      />
 
       <GenericForm fields={invoiceFormFields} onSubmit={handleSubmit} submitText="Save Invoice" />
     </div>

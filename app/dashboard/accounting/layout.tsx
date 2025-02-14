@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { AccountingNavBar } from '@/components/accounting/nav-bar'
+import { BreadcrumbNav } from '@/components/breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,11 @@ export default function DashboardLayout({
     <>
       <AccountingNavBar />
 
-      <div className="p-3">{children}</div>
+      <div className="p-3">
+        <BreadcrumbNav />
+
+        {children}
+      </div>
     </>
   )
 }

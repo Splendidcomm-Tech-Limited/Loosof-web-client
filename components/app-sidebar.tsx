@@ -23,7 +23,11 @@ import { ScrollArea } from './ui/scroll-area'
 // This is sample data.
 
 export function AppSidebar({ children, ...props }: React.ComponentProps<typeof Sidebar>) {
-  const data = sidebarData
+  // const data = sidebarData
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const data: { navMain: (any | undefined)[], user: any } = sidebarData
+
 
   return (
     <SidebarProvider>

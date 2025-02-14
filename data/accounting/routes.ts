@@ -1,7 +1,9 @@
 import { AccountingRoutesType } from '@/types'
 
 export const ACCOUNTING_ROUTES: AccountingRoutesType = {
+
   quickView: {
+
     title: 'Quick View',
     items: [
       { title: 'Bank Manager', href: '/dashboard/accounting/quick-view/bank-manager' },
@@ -12,77 +14,80 @@ export const ACCOUNTING_ROUTES: AccountingRoutesType = {
       { title: 'Account', href: '/dashboard/accounting/quick-view/account' },
     ],
   },
-  configuration: {
+  configurations: {
     title: 'Configuration',
+
     items: [
       {
         title: 'Charts of Accounts',
-        href: '/dashboard/accounting/configuration/charts-of-accounts',
+        href: '/dashboard/accounting/configurations/charts-of-accounts',
       },
       {
         title: 'Foreign Currency',
-        href: '/dashboard/accounting/configuration/foreign-currency',
+        href: '/dashboard/accounting/configurations/foreign-currency',
       },
       {
         title: 'Bank Manager',
-        href: '/dashboard/accounting/configuration/bank-manager',
+        href: '/dashboard/accounting/configurations/bank-manager',
       },
       {
         title: 'Financial Year',
-        href: '/dashboard/accounting/configuration/financial-year',
+        href: '/dashboard/accounting/configurations/financial-year',
       },
       {
         title: 'Taxes',
-        href: '/dashboard/accounting/configuration/taxes',
+        href: '/dashboard/accounting/configurations/taxes',
       },
       {
         title: 'Account type',
-        href: '/dashboard/accounting/configuration/account-type',
+        href: '/dashboard/accounting/configurations/account-type',
       },
       {
         title: 'Transaction type',
-        href: '/dashboard/accounting/configuration/transaction-type',
+        href: '/dashboard/accounting/configurations/transaction-type',
       },
       {
         title: 'Branches',
-        href: '/configuration/branches',
+        href: '/configurations/branches',
       },
       {
         title: 'Departments',
-        href: '/dashboard/accounting/configuration/departments',
+        href: '/dashboard/accounting/configurations/departments',
       },
       {
         title: 'Cost Center',
-        href: '/dashboard/accounting/configuration/cost-center',
+        href: '/dashboard/accounting/configurations/cost-center',
       },
       {
         title: 'Business Units',
-        href: '/dashboard/accounting/configuration/business-units',
+        href: '/dashboard/accounting/configurations/business-units',
       },
       {
         title: 'Custom Business Segment',
-        href: '/dashboard/accounting/configuration/custom-business-segment',
+        href: '/dashboard/accounting/configurations/custom-business-segment',
       },
       {
         title: 'Budget Planning',
-        href: '/dashboard/accounting/configuration/budget-planning',
+        href: '/dashboard/accounting/configurations/budget-planning',
       },
       {
         title: 'Depreciation Method',
-        href: '/dashboard/accounting/configuration/depreciation-method',
+        href: '/dashboard/accounting/configurations/depreciation-method',
       },
       {
         title: 'Assets Types',
-        href: '/dashboard/accounting/configuration/assets-types',
+        href: '/dashboard/accounting/configurations/assets-types',
       },
       {
         title: 'Assets',
-        href: '/dashboard/accounting/configuration/assets',
+        href: '/dashboard/accounting/configurations/assets',
       },
     ],
   },
   operations: {
     title: 'Operation',
+
+
     items: [
       {
         title: 'Bank Management',
